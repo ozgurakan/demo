@@ -22,6 +22,7 @@ channel.queue_bind(queue = "hello-queue",
 def msg_consumer(channel, method, header, body): 
     channel.basic_ack(delivery_tag = method.delivery_tag) 
     if body == "quit":
+        print "quitting..."
         channel.basic_cancel(consumer_tag = "hello-consumer")
         channel.stop_consuming()
     else:
