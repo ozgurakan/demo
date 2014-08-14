@@ -1,4 +1,4 @@
 demo
 ====
 
-Demo applications
+Demo applications.
